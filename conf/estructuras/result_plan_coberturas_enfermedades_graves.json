@@ -1,0 +1,177 @@
+{
+  "negocio_plan_coberturas_enfermedades_graves": {
+    "atr_negocio_canales_masivos": {
+      "canal": "canal_bancaseguros",
+      "centro_costos": "123",
+      "codigo_plan": "123",
+      "codigo_producto": "123",
+      "codigo_vendedor": "1123",
+      "comision_poliza": "123",
+      "compania": "seguros_generales_suramericana",
+      "fecha_continuidad": null,
+      "medios_cobro": "cobro_bancario",
+      "moneda": "cop",
+      "periodicidad_pago": "pago_mensual",
+      "poliza_continuidad": "123",
+      "ramo": "123",
+      "usuario_seus": "123",
+      "valor_asegurado": 123,
+      "vigencia_poliza": "123"
+    },
+    "cuentahabiente": {
+      "codigo_banco": "123",
+      "codigo_sucursal_banco": "123",
+      "fecha_vencimiento_tarjeta_credito": null,
+      "numero_cuenta": "123",
+      "numero_cuenta_confirmacion": "123",
+      "numero_cuotas_tarjeta": "123",
+      "numero_documento": "123",
+      "primer_apellido": "123",
+      "primer_nombre": "123",
+      "segundo_apellido": "123",
+      "segundo_nombre": "123",
+      "tipo_documento": "123",
+      "tipos_cuenta": "cuenta_ahorro"
+    },
+    "riesgos": {
+      "persona": {
+        "coberturas": {
+          "cob_enfermedades_graves": {
+            "atr_cob_plataforma_canales_masivos": {
+              "cancela_por_siniestro": true,
+              "tiempo_pago_siniestro": "renta_mensual_12_meses",
+              "tipo_cancelacion_siniestro": "cancela_cobertura",
+              "edad_maxima_permanencia": 123
+            },
+            "ramo_vida_individual": {
+              "compania": "seguros_generales_suramericana",
+              "impuesto": 23,
+              "pais": "pa"
+            },
+            "impuesto_prima": 123,
+            "numero_certificado": "123",
+            "prima_neta": 123,
+            "tipo_reserva": "reserva_matematica",
+            "valor_asegurado": 123,
+            "es_basica": true
+          },
+          "cob_vida": {
+            "atr_cob_plataforma_canales_masivos": {
+              "tiempo_pago_siniestro": "renta_mensual_24_meses",
+              "cancela_por_siniestro": true,
+              "edad_maxima_permanencia": 123,
+              "tipo_cancelacion_siniestro": "cancela_cobertura"
+            },
+            "ramo_vida_individual": {
+              "compania": "seguros_generales_suramericana",
+              "impuesto": 123,
+              "pais": "pa"
+            },
+            "es_basica": true,
+            "tipo_reserva": "reserva_matematica",
+            "impuesto_prima": 123,
+            "numero_certificado": "123",
+            "prima_neta": 123,
+            "valor_asegurado": 123
+          }
+        },
+        "asegurado": {
+          "asegurado_riesgos_negocio_plan_coberturas_enfermedades_graves": {
+            "autoriza_envio_correo": true,
+            "autoriza_envio_sms": true,
+            "email": "123",
+            "celular": "123",
+            "ciudad_residencia": "123",
+            "es_grupo_familiar": true,
+            "direccion": "123",
+            "numero_certificado": "123",
+            "primer_apellido": "123",
+            "segundo_nombre": "123",
+            "tipo_email": "asd",
+            "telefono": "123",
+            "primer_nombre": "123",
+            "numero_documento": "123",
+            "ocupacion": "123",
+            "profesion": "123",
+            "tipo_direccion": "123",
+            "tipo_documento": "123",
+            "segundo_apellido": "123",
+            "parentesco_asegurado": "123",
+            "fecha_nacimiento": null
+          }
+        },
+        "beneficiarios": {
+          "beneficiarios_riesgos_negocio_plan_coberturas_enfermedades_graves": {
+            "edad": 123,
+            "numero_documento": "123",
+            "parentesco_beneficiario": "123",
+            "segundo_nombre": "123",
+            "segundo_apellido": "123",
+            "primer_nombre": "123",
+            "primer_apellido": "123",
+            "tipo_documento": "123",
+            "tipo_beneficiario": "123"
+          }
+        },
+        "plan": {
+          "plan_a_plan_coberturas_enfermedades_graves": {
+            "atr_plan_plataforma_canales_masivos": {
+              "edad_maxima_ingreso": 123,
+              "edad_minima_ingreso": 123,
+              "porcentaje_incremento_plan": "123",
+              "tipo_incremento_plan": "incremento_anual"
+            },
+            "canal": "canal_digital",
+            "factor_fraccionamiento": 123,
+            "medio_venta": "mv_televentas",
+            "moneda": "cop",
+            "valor_asegurado": 123,
+            "vigencia_plan": "vigencia_anual"
+          }
+        },
+        "edad": 123,
+        "sexo": "femenino",
+        "id_agrupacion": "123"
+      }
+    },
+    "agrupacion": {
+      "agrupacion_negocio_plan_coberturas_enfermedades_graves": {
+        "id_agrupacion": "123",
+        "nombre": "123"
+      }
+    },
+    "tomador": {
+      "tomador_negocio_plan_coberturas_enfermedades_graves": {
+        "direccion": "123",
+        "primer_apellido": "123",
+        "segundo_nombre": "123",
+        "tipo_email": "123",
+        "autoriza_envio_correo": true,
+        "autoriza_envio_sms": true,
+        "email": "123",
+        "primer_nombre": "123",
+        "telefono": "123",
+        "tipo_direccion": "123",
+        "profesion": "123",
+        "numero_documento": "123",
+        "celular": "123",
+        "ciudad_residencia": "123",
+        "ocupacion": "123",
+        "segundo_apellido": "123",
+        "tipo_documento": "123"
+      }
+    },
+    "codigo_medio_venta": "4",
+    "id_plan": "123",
+    "fecha_rechazo": null,
+    "id_producto": "123",
+    "fecha_solicitud": null,
+    "fecha_cotizacion": null,
+    "fecha_expedicion": null,
+    "fecha_inicio_vigencia": null,
+    "id_negocio": "123",
+    "id_negocio_core_legacy": "123",
+    "observaciones": "123",
+    "version_reglas": "123"
+  }
+}

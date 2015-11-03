@@ -1,0 +1,18 @@
+.CO{
+	background: url(https://dl.dropboxusercontent.com/u/14403990/CO.png) 0 0 no-repeat;
+				    width: 32px;
+				    height: 32px;
+				    float: left;
+				    padding: 0 15px 0 5px;
+}
+.es-CO{
+	background: url(https://dl.dropboxusercontent.com/u/14403990/es-CO.png) 0 0 no-repeat;
+				    width: 32px;
+				    height: 32px;
+				    float: left;
+				    padding: 0 15px 0 5px;
+}
+    	.idioma{
+	    float: right;
+	    margin: 20px;
+	}

@@ -1,0 +1,11 @@
+@(conceptoFinal : ConceptoFinal, nombreNegocio: String, version: Int = 1)(implicit flash: Flash)
+<script src="/javascripts/dinamicos/@nombreNegocio/mainController.js"></script>
+
+<form action="/negocios/@nombreNegocio/configuracion"  >
+    <button type="button" class="btn btn-primary btn-lg" ng-click="cotizar()">Cotizar</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="expedir()">Expedir</button>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="expedir()" style="float:right">Configurar</button>
+    <label style="float:right;">Version: @version</label>
+    <label style="color:#43CF15;">@flash.get("success")</label>
+    @complejo(conceptoFinal, "root")
+</form>

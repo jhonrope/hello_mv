@@ -1,0 +1,2 @@
+@(conceptoFinal: ConceptoFinal)
+@if(conceptoFinal.concepto.esEditable && !conceptoFinal.concepto.valor.exists(_ != "")){ ng-disabled="estadoExpedido" } else { ng-disabled="true" }

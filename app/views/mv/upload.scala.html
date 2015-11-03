@@ -1,0 +1,11 @@
+@(nombreNegocio: String)(implicit flash: Flash)
+@helper.form(action = routes.NegociosController.upload(nombreNegocio), 'enctype -> "multipart/form-data") {
+
+<input type="file" name="@nombreNegocio">
+
+<p>
+    <input class="btn btn-default" type="submit">
+    <label style="color:#ff0000;">@flash.get("error")</label>
+</p>
+
+}

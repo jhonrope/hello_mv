@@ -1,0 +1,37 @@
+@(listaNegocios: Set[String])
+<div class="panel panel-default" ng-hide="false">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <div class="">Administrador de Negocios</div>
+        </h4>
+    </div>
+    <div id="root-atr_negocio_canales_masivos" class="panel-collapse collapse in">
+        <div class="panel-body">
+
+            <div class="form-group">
+                <form method="POST">
+                    <div class="contCaja col-md-3">
+                        <select class="form-control" name="nombreNegocio">
+                            @for( i <- listaNegocios){
+                            <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="form-control btn btn-primary dropdown-toggle" style="width: auto;"
+                                onclick="this.form.action='/negocios'" type="submit">Cargar Negocios
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="form-control btn btn-primary dropdown-toggle" style="width: auto;"
+                                onclick="this.form.action='/negocios/configuracion'" type="submit">Configurar Negocios
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

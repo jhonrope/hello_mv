@@ -1,0 +1,32 @@
+@(content: Html)
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <title>Hello MV - Configurador</title>
+    <link rel="shortcut icon" href="@routes.Assets.versioned(file="images/favicon.ico")">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/assets/stylesheets/sura.css">
+    <link rel="stylesheet" href="/assets/stylesheets/suraNeg.css">
+    <link rel="stylesheet" href="/assets/stylesheets/internacionalizacion.css">
+    <script src="@routes.Assets.at("app.js")"></script>
+
+</head>
+<body ng-controller="mainController">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><img src="@routes.Assets.versioned("images/logo-sura.png")" width="99" height="41" alt=""/></a>
+                </div>
+            </div>
+        </nav>
+        <div class="form_count">
+            @content
+        </div>
+    </div>
+</body>
+</html>

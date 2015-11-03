@@ -1,0 +1,18 @@
+@(nombreNegocio: String, estaConfigurado: Boolean = false)(implicit flash:Flash)
+<div class="panel panel-default" ng-hide="false">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <div class="">Configuración del Negocio @{nombreNegocio.capitalize}</div>
+        </h4>
+    </div>
+    <div class="panel-collapse collapse in">
+        <div class="panel-body">
+            @if(estaConfigurado){
+            <label>El negocio se encuentra configurado, puede descargar la configuracion actual.</label>
+            <a class="btn btn-default" href="/negocios/@nombreNegocio/configuracion/@{nombreNegocio}_conf.txt" download>Descargar</a>
+            }
+            @upload(nombreNegocio)
+        </div>
+    </div>
+</div>
+

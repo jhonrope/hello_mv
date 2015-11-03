@@ -1,0 +1,10 @@
+@(conceptoFinal: ConceptoFinal, idPadre: String)
+@import views.html.mv.helpers._
+@import Utils._
+@defining(generarId(idPadre,conceptoFinal.concepto.id)){ case (idModel, idName) =>
+<div class="contCaja col-md-3" >
+    <label>@{conceptoFinal.concepto.id}</label>
+<select name="@idName" @setInitialValue(conceptoFinal, idModel) ng-model="@idModel" class="form-control" @addAtributosComunes(conceptoFinal) @setDisable(conceptoFinal)>
+    @for( i <- conceptoFinal.concepto.respuestas){ <option value="@{i.valorRespuesta}">@{i.valorRespuesta}</option> } </select>
+</div>
+}

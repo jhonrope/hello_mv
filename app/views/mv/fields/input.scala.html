@@ -1,0 +1,9 @@
+@(conceptoFinal: ConceptoFinal, idPadre: String)
+@import views.html.mv.helpers._
+@import Utils._
+@defining(generarId(idPadre,conceptoFinal.concepto.id)){ case (idModel, idName) =>
+<div class="contCaja col-md-3" >
+    <label>@{conceptoFinal.concepto.id}</label>
+    <input type="text" name="@idName" ng-model="@idModel" @addAtributosComunes(conceptoFinal) class="form-control" @setInitialValueString(conceptoFinal, idModel) @setDisable(conceptoFinal)/>
+</div>
+}

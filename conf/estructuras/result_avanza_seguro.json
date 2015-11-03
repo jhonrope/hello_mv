@@ -1,0 +1,225 @@
+{
+  "negocio_avanza_seguro": {
+    "atr_negocio_canales_masivos": {
+      "canal": "canal_tuya",
+      "centro_costos": "123",
+      "codigo_plan": "123",
+      "codigo_producto": "123",
+      "codigo_vendedor": "123",
+      "comision_poliza": "123",
+      "compania": "seguros_de_vida_suramericana",
+      "medios_cobro": "cobro_bancario",
+      "moneda": "cop",
+      "periodicidad_pago": "pago_anual",
+      "poliza_continuidad": "123",
+      "ramo": "123",
+      "usuario_seus": "123",
+      "valor_asegurado": 123,
+      "vigencia_poliza": "123"
+    },
+    "cuentahabiente": {
+      "codigo_banco": "123",
+      "codigo_sucursal_banco": "123",
+      "numero_cuenta": "123",
+      "numero_cuenta_confirmacion": "123",
+      "numero_cuotas_tarjeta": "123",
+      "numero_documento": "123",
+      "primer_apellido": "123",
+      "primer_nombre": "123",
+      "segundo_apellido": "123",
+      "segundo_nombre": "123",
+      "tipo_documento": "123",
+      "tipos_cuenta": "tarjeta_credito"
+    },
+    "riesgos": {
+      "persona": {
+        "coberturas": {
+          "cob_invalidez_por_accidente": {
+            "atr_cob_plataforma_canales_masivos": {
+              "cancela_por_siniestro": true,
+              "edad_maxima_permanencia": 123,
+              "tiempo_pago_siniestro": "renta_mensual_12_meses",
+              "tipo_cancelacion_siniestro": "cancela_poliza"
+            },
+            "ramo_accidentes_personales": {
+              "compania": "seguros_generales_suramericana",
+              "impuesto": 123,
+              "pais": "pa"
+            },
+            "es_basica": true,
+            "impuesto_prima": 123,
+            "numero_certificado": "123",
+            "prima_neta": 123,
+            "tipo_reserva": "reserva_matematica",
+            "valor_asegurado": 123,
+            "prima_resultado_calculo": 123,
+            "impuesto_prima_resultado_calculo": 123,
+            "prima_comercial_resultado_calculo": 123
+          },
+          "cob_muerte_accidental": {
+            "atr_cob_plataforma_canales_masivos": {
+              "edad_maxima_permanencia": 123,
+              "cancela_por_siniestro": true,
+              "tiempo_pago_siniestro": "renta_mensual_24_meses",
+              "tipo_cancelacion_siniestro": "cancela_cobertura"
+            },
+            "ramo_accidentes_personales": {
+              "compania": "seguros_de_vida_suramericana",
+              "impuesto": 123
+            },
+            "es_basica": true,
+            "impuesto_prima": 123,
+            "numero_certificado": "123",
+            "valor_asegurado": 12,
+            "tipo_reserva": "reserva_matematica",
+            "prima_resultado_calculo": 123,
+            "impuesto_prima_resultado_calculo": 123,
+            "prima_comercial_resultado_calculo": 123
+          },
+          "cob_renta_diaria_hospitalizacion": {
+            "atr_cob_plataforma_canales_masivos": {
+              "cancela_por_siniestro": true,
+              "edad_maxima_permanencia": 123,
+              "tiempo_pago_siniestro": "renta_mensual_24_meses",
+              "tipo_cancelacion_siniestro": "cancela_cobertura"
+            },
+            "ramo_accidentes_personales": {
+              "compania": "seguros_generales_suramericana",
+              "impuesto": 123,
+              "pais": "pa"
+            },
+            "es_basica": true,
+            "impuesto_prima": 123,
+            "numero_certificado": "123",
+            "prima_neta": 123,
+            "tipo_reserva": "reserva_matematica",
+            "valor_asegurado": 123
+          }
+        },
+        "asegurado": {
+          "asegurado_riesgos_negocio_avanza_seguro": {
+            "celular": "123",
+            "autoriza_envio_sms": true,
+            "autoriza_envio_correo": true,
+            "ciudad_residencia": "123",
+            "direccion": "123",
+            "email": "123",
+            "es_grupo_familiar": true,
+            "numero_certificado": "123",
+            "numero_documento": "123",
+            "ocupacion": "123",
+            "parentesco_asegurado": "123",
+            "primer_apellido": "123",
+            "primer_nombre": "123",
+            "profesion": "123",
+            "segundo_apellido": "123",
+            "segundo_nombre": "123",
+            "telefono": "123",
+            "tipo_direccion": "123",
+            "tipo_documento": "123",
+            "tipo_email": "123"
+          }
+        },
+        "beneficiarios": {
+          "beneficiarios_riesgos_negocio_avanza_seguro": {
+            "edad": 123,
+            "numero_documento": "123",
+            "parentesco_beneficiario": "123",
+            "primer_apellido": "123",
+            "primer_nombre": "123",
+            "segundo_apellido": "123",
+            "segundo_nombre": "123",
+            "tipo_beneficiario": "123",
+            "tipo_documento": "123"
+          }
+        },
+        "plan": {
+          "plan_a_avanza_seguro": {
+            "atr_prod_plataforma_canales_masivos": {
+              "bancos": "banco_sufi",
+              "cancelacion_automatica": true,
+              "codigo_forma_impresion": "123",
+              "codigo_forma_nota_tecnica": "123",
+              "dias_mora_cancelacion": 123,
+              "dueno_solucion": "123",
+              "medios_cobro": "cobro_bancario",
+              "nombre_compania_impresion_cartas": "123",
+              "periodicidad_pago": "pago_anual",
+              "ramo_superintendencia": "123",
+              "rango_numeracion_automatica": 123,
+              "rango_numeracion_preimpresa": 123,
+              "renovacion_automatica": true,
+              "tipo_numeracion": "numeracion_automatica",
+              "tipos_cuenta": "tarjeta_credito"
+            },
+            "atr_plan_plataforma_canales_masivos": {
+              "edad_maxima_ingreso": 123,
+              "edad_minima_ingreso": 123,
+              "porcentaje_incremento_plan": "123",
+              "tipo_incremento_plan": "incremento_continuo"
+            },
+            "ramo_bancaseguros": {
+              "compania": "seguros_generales_suramericana",
+              "impuesto": 123,
+              "pais": "pa"
+            },
+            "canal": "canal_digital",
+            "factor_fraccionamiento": 123,
+            "medio_venta": "mv_televentas",
+            "moneda": "cop",
+            "valor_asegurado": 123,
+            "vigencia_plan": "vigencia_anual",
+            "centro_costos": "123",
+            "pais": "pa",
+            "reaseguro": true,
+            "maneja_iva": true,
+            "maneja_diferido": true
+          }
+        },
+        "edad": 123,
+        "sexo": "masculino",
+        "id_agrupacion": "123",
+        "prima_resultado_calculo": 123,
+        "impuesto_prima_resultado_calculo": 123,
+        "prima_comercial_resultado_calculo": 123
+      }
+    },
+    "agrupacion": {
+      "agrupacion_negocio_avanza_seguro": {
+        "id_agrupacion": "123",
+        "nombre": "123"
+      }
+    },
+    "tomador": {
+      "tomador_negocio_avanza_seguro": {
+        "direccion": "123",
+        "primer_apellido": "123",
+        "segundo_nombre": "123",
+        "tipo_email": "123",
+        "telefono": "123",
+        "primer_nombre": "123",
+        "email": "123",
+        "numero_documento": "123",
+        "profesion": "123",
+        "tipo_direccion": "123",
+        "tipo_documento": "12",
+        "segundo_apellido": "3123",
+        "ocupacion": "123",
+        "ciudad_residencia": "123",
+        "celular": "123",
+        "autoriza_envio_sms": true,
+        "autoriza_envio_correo": true
+      }
+    },
+    "codigo_medio_venta": "9",
+    "id_negocio": "123",
+    "id_negocio_core_legacy": "123",
+    "id_plan": "123",
+    "id_producto": "123",
+    "observaciones": "123",
+    "version_reglas": "123",
+    "prima_resultado_calculo": 123,
+    "impuesto_prima_resultado_calculo": 123,
+    "prima_comercial_resultado_calculo": 123
+  }
+}

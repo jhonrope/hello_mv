@@ -1,0 +1,387 @@
+body{
+padding-top:80px;
+font-family: 'Open Sans', sans-serif;
+}
+.container{
+	width:70%;
+	}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover{
+	background:none;
+	color:#FFFFFF;
+	}
+.navbar{
+	min-height:80px;
+	}
+.navbar-inverse{
+	background:#165fa1;
+	border:0;
+	}
+.navbar-inverse .navbar-nav > li > a{
+	color:#bbe7f9;
+	}
+.navbar-nav > li:before{
+	content:"";
+	border-right:1px solid #fcc956;
+	height:15px;
+    position: absolute;
+    top: 32px;
+    width: 100%;
+	}
+.navbar-nav > li:last-child:before{
+	border:none;
+	}
+.navbar-nav > li > a{
+	padding:29px 10px;
+	}
+.navbar-brand{
+	height:auto;
+	padding:19px;
+	}
+/*content*/
+.starter-template{
+	background:#FF0004;
+	}
+.tit1{
+	float:left;
+	padding:10px 20px;
+	font-size:18px;
+	color:#FFFFFF;
+	background:#fcc956;
+	margin:0 0 0 -20px;
+	}
+.form_cont{
+	width:100%;
+	float:left;
+	margin:20px 0 0 0;
+	}
+.form-group label{
+	color:#5a6a70;
+	font-weight:400;
+	}
+.tab{
+	width:100%;
+	float:left;
+	margin:10px 0;
+	}
+.tab .nav-tabs{
+	background:#165fa1;
+	border:0;
+	display:table;
+	width:100%;
+	}
+.tab .nav-tabs > li{
+	margin:0;
+	display:table-cell !important;
+	float:inherit !important;
+	}
+.tab .nav-tabs > li > a{
+	border-radius:0;
+	border:0;
+	outline:none;
+	color:#FFFFFF;
+	margin:0;
+	text-align:center;
+	}
+.tab .nav-tabs > li.active > a,
+.tab .nav-tabs > li.active > a:focus,
+.tab .nav-tabs > li.active > a:hover{
+	border:0;
+	background:#0236FF;
+	color:#FFFFFF;
+	}
+.tab .nav-tabs > li.active2 > a,
+.tab .nav-tabs > li.active2 > a:focus,
+.tab .nav-tabs > li.active2 > a:hover{
+	border:0;
+	background:#0236FF;
+	color:#FFFFFF;
+	}
+.tab .tab-content{
+	margin:15px 0 0 0;
+	}
+.tab .1Tab:before,
+.tab .2Tab:before,
+.tab .3Tab:before,
+.tab .4Tab:before,
+.tab .5Tab:before{
+	content:"";
+	width:100%;
+	height:3px;
+	position:absolute;
+	bottom:0;
+	z-index:2;
+	}
+
+.tab .numero1Tab:before,
+.tab .numero1Tab a:hover,
+.tab .nav-tabs > li.numero1Tab.active > a,
+.numero1 .subtit{
+	background:#14aaed;
+	}
+.tab .numero2Tab:before,
+.tab .numero2Tab a:hover,
+.tab .nav-tabs > li.numero2Tab.active > a,
+.numero2 .subtit{
+	background:#dbd858;
+	}
+.tab .numero3Tab:before,
+.tab .numero3Tab a:hover,
+.tab .nav-tabs > li.numero3Tab.active > a,
+.numero3 .subtit{
+	background:#90d395;
+	}
+.tab .numero4Tab:before,
+.tab .numero4Tab a:hover,
+.tab .nav-tabs > li.numero4Tab.active > a,
+.numero4 .subtit{
+	background:#f95562;
+	}
+.tab .numero5Tab:before,
+.tab .numero5Tab a:hover,
+.tab .nav-tabs > li.numero5Tab.active > a,
+.numero5 .subtit{
+	background:#fbb03b;
+	}
+.numero1 .panel-title a{
+	color:#14aaed;
+	}
+.numero2 .panel-title a{
+	color:#dbd858;
+	}
+.numero3 .panel-title a{
+	color:#90d395;
+	}
+.numero4 .panel-title a{
+	color:#f95562;
+	}
+.numero5 .panel-title a{
+	color:#fbb03b;
+	}
+.subtit{
+	color:#FFFFFF;
+	float:left;
+	padding:10px 20px;
+	width:100%;
+	margin-top:6px;
+	margin-bottom:6px;
+	}
+
+.btn_cont_next{
+	width:100%;
+	float:left;
+	text-align:right;
+	margin:0 0 20px 0;
+	}
+button.alert_icon{
+	background:none;
+	border:0;
+	}
+.alert_icon{
+	float:right;
+	color:#f95562 !important;
+	margin:0 40px 0 0;
+	}
+button.alert_iconsub{
+	background:none;
+	border:0;
+	}
+.alert_iconsub{
+	float:right;
+	color:#fff !important;
+	margin:0 5px 0 0;
+	}
+
+.panel-group .panel{
+	border-radius:0;
+	}
+.btn{
+	border-radius:0;
+	}
+footer{
+	width:100%;
+	padding:20px;
+	background:#eef2f5;
+	text-align:right;
+	}
+.btn-default{
+	background:#165fa1;
+	border:0;
+	color:#FFFFFF;
+	}
+.btn-default.active,
+.btn-default:hover,
+.btn-default:focus{
+	background:#105182;
+	color:#FFFFFF;
+	}
+.btn-primary{
+	background:#fcc956;
+	border:0;
+	}
+.btn-primary.active,
+.btn-primary:hover,
+.btn-primary:focus{
+	background:#f2ab1c;
+	}
+.btn-success{
+	background:#39b54a;
+	border:0;
+	}
+.btn-success.active,
+.btn-success:hover,
+.btn-success:focus{
+	background:#27a032;
+	}
+.down_icon {
+  float: right;
+  color: #14aaed !important;
+  margin: 0 40px 0 0;
+	}
+	button.down_icon {
+	  background: none;
+	  border: 0;
+	}
+	.input_cont{
+width: 100%;
+float: left;
+text-align: center;
+border: 1px solid #ccc;
+padding: 6px 12px;
+}
+.contCaja{
+height: 70px;
+}
+.bordeTabla{
+border: 1px solid #CCC;
+}
+.input_btn{
+width: 100%;
+float: left;
+text-align: left;
+padding-top: 23px;
+}
+/*login*/
+
+.log{
+	width:100%;
+	display:table;
+	position:fixed;
+	height:100%;
+	}
+.log .log_img{
+	width:40%;
+	vertical-align:bottom;
+	}
+.log .log_contForm{
+	width:60%;
+	padding:5% 5% 0 5%;
+	display:table-cell;
+	}
+.log .log_contForm .titul{
+	width:50%;
+	font-size:40px;
+	font-weight:300;
+	color:#FFFFFF;
+	margin:3% 0 20px 0;
+	background:#fcc956;
+	padding:0 2%;
+	}
+.log .log_contForm .contPro{
+	width:50%;
+	background:#165fa1;
+	padding:5% 2%;
+	}
+.log .log_contForm .contPro label{
+	color:#FFFFFF;
+	font-size:24px;
+	}
+/*matriz*/
+
+.matz{
+	width:100%;
+	display:table;
+	height:100%;
+	}
+.matz .matz_img{
+	width:40%;
+	display:table-cell;
+	vertical-align:bottom;
+	}
+.matz .matz_img img{
+	width:100%;
+	max-width:648px;
+	height:auto;
+	}
+.matz .matz_contForm{
+	width:60%;
+	padding:1% 0 0 0;
+	display:table-cell;
+	}
+.matz .matz_contForm .titul{
+	width:96%;
+	float:left;
+	font-size:40px;
+	font-weight:300;
+	color:#FFFFFF;
+	margin:3% 0 20px 0;
+	background:#fcc956;
+	padding:0 2%;
+	}
+.matz .matz_contForm .contPro{
+	width:96%;
+	float:left;
+	background:#eef2f5;
+	padding:5% 2%;
+	}
+.matz .matz_contForm .contPro label{
+	color:#FFFFFF;
+	font-size:24px;
+	}
+.table_matz .green{
+	background:#27a032;
+	color:#FFF;
+	}
+.table_matz .yellow{
+	background:#f2ab1c;
+	color:#FFF;
+	}
+.table_matz .red{
+	background:#d1202d;
+	color:#FFF;
+	}
+.table_matz .gris{
+	text-align:center;
+	vertical-align:middle;
+	}
+.matz .matz_contForm .contPro .tag1{
+	width:30%;
+	float:left;
+	background:#27a032;
+	color:#FFF;
+	padding:2px 5px;
+	margin:0 5% 0 0;
+	}
+.matz .matz_contForm .contPro .tag2{
+	width:30%;
+	float:left;
+	background:#f2ab1c;
+	color:#FFF;
+	padding:2px 5px;
+	margin:0 5% 0 0;
+	}
+.matz .matz_contForm .contPro .tag3{
+	width:30%;
+	float:left;
+	background:#d1202d;
+	color:#FFF;
+	padding:2px 5px;
+	margin:0 5% 0 0;
+	}
+.matz .matz_contForm .contPro .tax{
+	width:65%;
+	float:left;
+	font-size:10px;
+	line-height:12px;
+	}

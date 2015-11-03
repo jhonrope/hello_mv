@@ -1,0 +1,11 @@
+@(conceptoFinal: ConceptoFinal, idPadre: String)
+@import views.html.mv.helpers._
+@minMaxNumber(min: Double, max: Double) = { @if(min < max) { min="@min" max="@max" }}
+@import Utils._
+@defining(generarId(idPadre,conceptoFinal.concepto.id)){ case (idModel, idName) =>
+<div class="contCaja col-md-3">
+    <label>@{conceptoFinal.concepto.id}</label>
+    <input type="number" name="@idName" @addAtributosComunes(conceptoFinal) @setInitialValue(conceptoFinal, idModel) @minMaxNumber(conceptoFinal.concepto.minimo.getOrElse(0.0), conceptoFinal.concepto.maximo.getOrElse(0.0))
+           class="form-control" ng-model="@idModel" @setDisable(conceptoFinal)/>
+</div>
+}

@@ -1,0 +1,12 @@
+@(conceptoFinal: ConceptoFinal, idPadre: String)
+@import fields._
+
+    @conceptoFinal.concepto match {
+    case a: Concepto if a.tipo == "booleano" => {@checkbox(conceptoFinal, idPadre)}
+    case a: Concepto if a.tipo == "fecha" => {@inputDate(conceptoFinal, idPadre )}
+    case a: Concepto if a.tipo == "numerico" => {@inputNumber(conceptoFinal, idPadre)}
+    case a: Concepto if a.tipo == "cadena" && a.valor.nonEmpty => {@input(conceptoFinal, idPadre)}
+    case a: Concepto if a.respuestas.nonEmpty => {@select(conceptoFinal, idPadre)}
+    case _ => {@input(conceptoFinal, idPadre)}
+    }
+

@@ -1,0 +1,2 @@
+@(conceptoFinal: ConceptoFinal, idModel: String)
+@{conceptoFinal.concepto.valor.map(v => s"ng-init=$idModel=$v")}

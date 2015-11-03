@@ -1,0 +1,555 @@
+{
+  "concepto": {
+    "nombreRelacion": "atr_negocio_canales_masivos",
+    "codigo": "atr_negocio_canales_masivos",
+    "id": "atr_negocio_canales_masivos",
+    "descripcion": "atr_negocio_canales_masivos",
+    "tipo": "complejo",
+    "clase": "informacion",
+    "valor": null,
+    "respuestas": [],
+    "esLista": false,
+    "esBorrable": true,
+    "lenguaje": [
+      {
+        "nombre": "atr_negocio_canales_masivos",
+        "descripcion": "atr_negocio_canales_masivos",
+        "localizacion": "es-CO"
+      }
+    ]
+  },
+  "atributos": [
+    {
+      "concepto": {
+        "posicion":10,
+        "nombreRelacion": "canal",
+        "codigo": "cod_canal",
+        "id": "canal",
+        "descripcion": "canal",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "canal_bancaseguros",
+        "respuestas": [
+          {
+            "valorRespuesta": "canal_bancaseguros",
+            "nombreConceptoDependencia": "",
+            "valorDependencia": "",
+            "tipoConceptoDependencia": null,
+            "lenguaje": [
+              {
+                "nombre": "Bancaseguros",
+                "descripcion": "Bancaseguros",
+                "localizacion": "es-CO"
+              },
+              {
+                "nombre": "Bancassurance",
+                "descripcion": "Bancassurance",
+                "localizacion": "en-US"
+              }
+            ]
+          }
+        ],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Canal",
+            "descripcion": "Canal",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Sales channel",
+            "descripcion": "Sales channel",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "posicion":5,
+        "nombreRelacion": "centro_costos",
+        "codigo": "centro_costos",
+        "id": "centro_costos",
+        "descripcion": "centro_costos",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "2825",
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Centro de costos",
+            "descripcion": "Centro de costos",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Cost center",
+            "descripcion": "Cost center",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "posicion":2,
+        "nombreRelacion": "codigo_plan",
+        "codigo": "codigo_plan",
+        "id": "codigo_plan",
+        "descripcion": "codigo_plan",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "codigo_plan",
+            "descripcion": "codigo_plan",
+            "localizacion": "es-CO"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "posicion":1,
+        "nombreRelacion": "codigo_producto",
+        "codigo": "codigo_producto",
+        "id": "codigo_producto",
+        "descripcion": "codigo_producto",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "codigo_producto",
+            "descripcion": "codigo_producto",
+            "localizacion": "es-CO"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "posicion":1,
+        "nombreRelacion": "codigo_vendedor",
+        "codigo": "codigo_vendedor",
+        "id": "codigo_vendedor",
+        "descripcion": "codigo_vendedor",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "4999",
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "C�digo vendedor",
+            "descripcion": "C�digo vendedor",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Vendor code",
+            "descripcion": "Vendor code",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "comision_poliza",
+        "codigo": "comision_poliza",
+        "id": "comision_poliza",
+        "descripcion": "comision_poliza",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "comision_poliza",
+            "descripcion": "comision_poliza",
+            "localizacion": "es-CO"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "compania",
+        "codigo": "cod_compania",
+        "id": "compania",
+        "descripcion": "compania",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "seguros_de_vida_suramericana",
+        "respuestas": [
+          {
+            "valorRespuesta": "seguros_generales_suramericana",
+            "nombreConceptoDependencia": "pais",
+            "valorDependencia": "co",
+            "tipoConceptoDependencia": "cadena",
+            "lenguaje": [
+              {
+                "nombre": "seguros_generales_suramericana",
+                "descripcion": "seguros_generales_suramericana",
+                "localizacion": "es-CO"
+              }
+            ]
+          },
+          {
+            "valorRespuesta": "seguros_de_vida_suramericana",
+            "nombreConceptoDependencia": "pais",
+            "valorDependencia": "co",
+            "tipoConceptoDependencia": "cadena",
+            "lenguaje": [
+              {
+                "nombre": "Seguros de Vida Suramericana",
+                "descripcion": "Seguros de Vida Suramericana",
+                "localizacion": "es-CO"
+              },
+              {
+                "nombre": "Seguros de Vida Suramericana",
+                "descripcion": "Seguros de Vida Suramericana",
+                "localizacion": "en-US"
+              }
+            ]
+          }
+        ],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Compa��a",
+            "descripcion": "Compa��a",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Company",
+            "descripcion": "Company",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "fecha_continuidad",
+        "codigo": "fecha_continuidad",
+        "id": "fecha_continuidad",
+        "descripcion": "fecha_continuidad",
+        "tipo": "fecha",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Fecha de continuidad",
+            "descripcion": "Fecha de continuidad",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Continuity date",
+            "descripcion": "Continuity date",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "medios_cobro",
+        "codigo": "medios_cobro",
+        "id": "medios_cobro",
+        "descripcion": "medios_cobro",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "cobro_bancario",
+        "respuestas": [
+          {
+            "valorRespuesta": "cobro_bancario",
+            "nombreConceptoDependencia": "",
+            "valorDependencia": "",
+            "tipoConceptoDependencia": null,
+            "lenguaje": [
+              {
+                "nombre": "Bancario",
+                "descripcion": "Bancario",
+                "localizacion": "es-CO"
+              },
+              {
+                "nombre": "Banking",
+                "descripcion": "Banking",
+                "localizacion": "en-US"
+              }
+            ]
+          }
+        ],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Medio de cobro",
+            "descripcion": "Medio de cobro",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Means of payment",
+            "descripcion": "Means of payment",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "moneda",
+        "codigo": "cod_moneda",
+        "id": "moneda",
+        "descripcion": "moneda",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "cop",
+        "respuestas": [
+          {
+            "valorRespuesta": "cop",
+            "nombreConceptoDependencia": "",
+            "valorDependencia": "",
+            "tipoConceptoDependencia": null,
+            "lenguaje": [
+              {
+                "nombre": "Pesos Colombianos",
+                "descripcion": "Pesos Colombianos",
+                "localizacion": "es-CO"
+              },
+              {
+                "nombre": "Pesos Colombianos",
+                "descripcion": "Pesos Colombianos",
+                "localizacion": "en-US"
+              }
+            ]
+          }
+        ],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Moneda",
+            "descripcion": "Moneda",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Currency",
+            "descripcion": "Currency",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "periodicidad_pago",
+        "codigo": "periodicidad_pago",
+        "id": "periodicidad_pago",
+        "descripcion": "periodicidad_pago",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "pago_mensual",
+        "respuestas": [
+          {
+            "valorRespuesta": "pago_mensual",
+            "nombreConceptoDependencia": "",
+            "valorDependencia": "",
+            "tipoConceptoDependencia": null,
+            "lenguaje": [
+              {
+                "nombre": "Mensual",
+                "descripcion": "Mensual",
+                "localizacion": "es-CO"
+              },
+              {
+                "nombre": "Monthly",
+                "descripcion": "Monthly",
+                "localizacion": "en-US"
+              }
+            ]
+          }
+        ],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Periodicidad de pago",
+            "descripcion": "Periodicidad de pago",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Payment periodicity",
+            "descripcion": "Payment periodicity",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "poliza_continuidad",
+        "codigo": "poliza_continuidad",
+        "id": "poliza_continuidad",
+        "descripcion": "poliza_continuidad",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "P�liza de continuidad",
+            "descripcion": "P�liza de continuidad",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Policy continuity",
+            "descripcion": "Policy continuity",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "ramo",
+        "codigo": "cod_ramo",
+        "id": "ramo",
+        "descripcion": "ramo",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "BAN",
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Ramo",
+            "descripcion": "Ramo",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Branch",
+            "descripcion": "Branch",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "usuario_seus",
+        "codigo": "usuario_seus",
+        "id": "usuario_seus",
+        "descripcion": "usuario_seus",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Usuario",
+            "descripcion": "Usuario",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "User",
+            "descripcion": "User",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "valor_asegurado",
+        "codigo": "cod_valor_asegurado",
+        "id": "valor_asegurado",
+        "descripcion": "valor_asegurado",
+        "tipo": "numerico",
+        "clase": "informacion",
+        "valor": null,
+        "respuestas": [],
+        "maximo": 0,
+        "minimo": 0,
+        "precision": 0,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Valor asegurado",
+            "descripcion": "Valor asegurado",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Insured value",
+            "descripcion": "Insured value",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    },
+    {
+      "concepto": {
+        "nombreRelacion": "vigencia_poliza",
+        "codigo": "vigencia_poliza",
+        "id": "vigencia_poliza",
+        "descripcion": "vigencia_poliza",
+        "tipo": "cadena",
+        "clase": "informacion",
+        "valor": "12",
+        "respuestas": [],
+        "esLista": false,
+        "esBorrable": true,
+        "lenguaje": [
+          {
+            "nombre": "Vigencia de la p�liza",
+            "descripcion": "Vigencia de la p�liza",
+            "localizacion": "es-CO"
+          },
+          {
+            "nombre": "Effective policy",
+            "descripcion": "Effective policy",
+            "localizacion": "en-US"
+          }
+        ]
+      },
+      "atributos": []
+    }
+  ]
+}
