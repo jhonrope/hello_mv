@@ -4,6 +4,7 @@
 
 # Home page
 GET  /                                                            controllers.NegociosController.index()
+POST  /dinamico                                                    controllers.NegociosController.formTest()
 POST /negocios                                                    controllers.NegociosController.negocios
 GET  /negocios/:nombreNegocio                                     controllers.NegociosController.mostrarNegocio(nombreNegocio)
 GET  /test                                                        controllers.NegociosController.test

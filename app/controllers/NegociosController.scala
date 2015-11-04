@@ -4,6 +4,7 @@ import javax.inject.Inject
 
 import models.mv.ConceptoFinal
 import persistence.ConfiguracionPersistence
+import play.api.data.Form
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.libs.Files.TemporaryFile
 import play.api.libs.json.Json
@@ -25,7 +26,7 @@ class NegociosController @Inject()(configuracionPersistence: ConfiguracionPersis
 
   def test() = Action { implicit request =>
 
-    val (complejos, noComplejos) =atrNegocio.atributos.partition(_.concepto.tipo == "complejo")
+    val (complejos, noComplejos) = atrNegocio.atributos.partition(_.concepto.tipo == "complejo")
     val listaOrdenada: List[ConceptoFinal] = complejos ++ noComplejos.sortBy(_.concepto.posicion)
 
     Ok(agregarAlIndex(views.html.mv.negocio(atrNegocio, "test")))
@@ -33,6 +34,11 @@ class NegociosController @Inject()(configuracionPersistence: ConfiguracionPersis
 
   def index() = Action {
     Ok(agregarAlIndex(views.html.mv.menuNegocios(configuracionPersistence.listarNegocios())))
+  }
+
+  def formTest() = Action { request =>
+    request.body.asFormUrlEncoded.map(println)
+    Redirect(routes.NegociosController.mostrarNegocio("avanza_seguro"))
   }
 
   def configuracion() = Action { request =>
