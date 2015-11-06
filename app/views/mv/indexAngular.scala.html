@@ -16,17 +16,17 @@
 
 </head>
 <body ng-controller="mainController">
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/"><img src="@routes.Assets.versioned("images/logo-sura.png")" width="99" height="41" alt=""/></a>
-                </div>
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="@routes.Assets.versioned("images/logo-sura.png")" width="99" height="41" alt=""/></a>
             </div>
-        </nav>
-        <div class="form_count">
-            @content
         </div>
+    </nav>
+    <div class="form_count">
+@content
     </div>
+</div>
 </body>
 </html>

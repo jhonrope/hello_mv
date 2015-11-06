@@ -9,11 +9,10 @@ scalaVersion := "2.11.6"
 resolvers += "Scalaz Bintray Repo" at "https://dl.bintray.com/scalaz/releases"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-slick" % "1.1.0",
-  "com.typesafe.play" %% "play-slick-evolutions" % "1.1.0",
-  "com.h2database" % "h2" % "1.4.177",
-  specs2 % Test
-)     
+  "org.scalatest" %% "scalatest" % "2.2.1" % "test",
+  "org.scalatestplus" %% "play" % "1.4.0-M3" % "test",
+  "org.scalamock" %% "scalamock-scalatest-support" % "3.2" % "test"
+)
 
 // Play provides two styles of routers, one expects its actions to be injected, the
 // other, legacy style, accesses its actions statically.
@@ -24,3 +23,5 @@ fork in run := false
 
 TwirlKeys.templateImports += "models.mv._"
 
+logLevel in Test := Level.Debug
+javaOptions in Test += "-Dwebdriver.chrome.driver=C:\\Users\\Jhony\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"

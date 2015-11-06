@@ -3,23 +3,34 @@ package controllers
 import javax.inject.Inject
 
 import models.mv.ConceptoFinal
-import persistence.ConfiguracionPersistence
-import play.api.data.Form
+import persistence.{ConfiguracionPersistenceTrait, ConfiguracionPersistence}
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.libs.Files.TemporaryFile
-import play.api.libs.json.Json
+import play.api.libs.json._
 import play.api.mvc.{Action, Codec, Controller, Result}
 
 import scala.concurrent.ExecutionContext
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
 
-class NegociosController @Inject()(configuracionPersistence: ConfiguracionPersistence, val messagesApi: MessagesApi)
-                                  (implicit ec: ExecutionContext) extends Controller with I18nSupport {
+class NegociosController @Inject()(override val configuracionPersistence: ConfiguracionPersistence, override val messagesApi: MessagesApi)
+                                  (implicit override val ec: ExecutionContext) extends Controller with I18nSupport with NegociosControllerTrait {
+}
+
+trait NegociosControllerTrait {
+  self: Controller with I18nSupport =>
+
 
   import Utils._
 
   implicit val myCustomCharset = Codec.utf_8
+
+  def configuracionPersistence: ConfiguracionPersistenceTrait
+
+  def messagesApi: MessagesApi
+
+  implicit def ec: ExecutionContext
+
 
   val atrNegocio = construirConceptoFinal("/estructuras/complejo.json").get
 
@@ -36,9 +47,45 @@ class NegociosController @Inject()(configuracionPersistence: ConfiguracionPersis
     Ok(agregarAlIndex(views.html.mv.menuNegocios(configuracionPersistence.listarNegocios())))
   }
 
+  def concatenar(jspath: JsPath, string: String): JsPath = jspath \ string
+
   def formTest() = Action { request =>
-    request.body.asFormUrlEncoded.map(println)
-    Redirect(routes.NegociosController.mostrarNegocio("avanza_seguro"))
+    request.body.asFormUrlEncoded.map { valor =>
+      val wer: List[Reads[JsObject]] = valor.map { case (llave, valor) =>
+
+        val sinRoot: List[String] = llave.split("-").toList
+
+        val matching = "(.*)<(.*)>".r
+        val pair: (String, String) = sinRoot.last match {
+          case matching(c, y) => (c, y)
+          case _ => ("", "")
+        }
+        val z: JsPath = sinRoot.init.:+(pair._1).foldLeft[JsPath](JsPath)(concatenar)
+
+        val tipoValor: JsValue = (pair._2, valor.mkString) match {
+          case ("numerico", "") => JsNumber(0)
+          case ("numerico", v) => JsNumber(v.toDouble)
+          case ("booleano", "") => JsBoolean(false)
+          case ("booleano", v) => JsBoolean(v.toBoolean)
+          case (_, "") => JsNull
+          case (_, v) => JsString(v)
+        }
+        println(z)
+        __.json.update(z.json.put(tipoValor))
+      }.toList
+
+      val superReads = wer.reduce(_ andThen _)
+      println(wer)
+      val werty = superReads.reads(JsObject(Map[String, JsValue]()))
+
+      println(werty)
+      werty
+    }
+
+
+
+
+    Redirect(routes.NegociosController.test())
   }
 
   def configuracion() = Action { request =>
@@ -104,7 +151,6 @@ class NegociosController @Inject()(configuracionPersistence: ConfiguracionPersis
 
   def upload(nombreNegocio: String) = Action(parse.multipartFormData) { request =>
     request.body.file(nombreNegocio).map { picture =>
-      import java.io.File
       val filename: String = picture.filename
       val contentType = picture.contentType
       val y: TemporaryFile = picture.ref
