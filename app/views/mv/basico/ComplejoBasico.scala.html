@@ -1,5 +1,5 @@
-@(conceptoFinal: ConceptoFinal, idPadre: String)
-@import helpers._
+@(conceptoFinal: ConceptoFinal, idPadre: String)(noComplejoLocal: NoComplejoBase)
+@import views.html.mv.helpers._
 @import Utils._
 @defining(generarId(idPadre,conceptoFinal.concepto.id)){ case (idModel, idName) =>
 <div class="panel panel-default" @addAtributosComunes(conceptoFinal)>
@@ -17,12 +17,12 @@
     </div>
     <div id="@idName" class="panel-collapse collapse in">
         <div class="panel-body">
-                <div class="form-group">
-                    @for(atributo <- ordenarConceptoFinalPorPosicion(conceptoFinal.atributos)){
-                    @if(atributo.concepto.tipo == "complejo"){ @complejo(atributo, idName) } else {
-                    @noComplejo(atributo, idName) }
-                    }
-                </div>
+            <div class="form-group">
+                @for(atributo <- ordenarConceptoFinalPorPosicion(conceptoFinal.atributos)){
+                @if(atributo.concepto.tipo == "complejo"){ @{ComplejoBasico(atributo, idName)(noComplejoLocal)} } else {
+                @{noComplejoLocal(atributo, idName)} }
+                }
+            </div>
         </div>
     </div>
 </div>

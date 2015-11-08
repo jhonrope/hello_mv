@@ -1,8 +1,13 @@
 package controllers
 
-import models.mv.ConceptoFinal
+import models.configuracion.ConceptoFinal
+import models.mv._
+import models.mv.base.{ComplejoBase, NoComplejoBase}
+import models.mv.basico.fields._
+import models.mv.basico.{NoComplejo, Complejo}
 import play.api.libs.json.Json
-import play.twirl.api.Html
+import play.api.mvc.Flash
+import play.twirl.api.{Html, HtmlFormat}
 
 import scala.io.Source
 import scala.util.{Failure, Try}
@@ -29,12 +34,21 @@ object Utils {
 
   def ordenarConceptoFinalPorPosicion(lista: List[ConceptoFinal]) = {
     val (complejos, noComplejos) = lista.partition(_.concepto.tipo == "complejo")
-    complejos.sortBy(_.concepto.posicion ) ++ noComplejos.sortBy(_.concepto.posicion)
+    complejos.sortBy(_.concepto.posicion) ++ noComplejos.sortBy(_.concepto.posicion)
   }
 
   def generarId(idPadre: String, idConcepto: String): (String, String) = {
-    val id= s"$idPadre-$idConcepto"
+    val id = s"$idPadre-$idConcepto"
     (id.replaceAll("-", "."), id)
+  }
+
+
+  def negocioDefault(conceptoFinal: ConceptoFinal, idPadre: String, version: Int)(implicit flash: Flash): HtmlFormat.Appendable = {
+    val nocomplejo: NoComplejoBase = NoComplejo(ElementoBooleanoBasico, ElementoFechaBasico, ElementoSelectBasico, ElementoNumericoBasico, ElementoTextoBasico, ElementoTextoBasico)
+
+    val complejo: ComplejoBase = Complejo(nocomplejo)
+
+    views.html.mv.basico.NegocioBasico(conceptoFinal, idPadre, version)(complejo)
   }
 
 

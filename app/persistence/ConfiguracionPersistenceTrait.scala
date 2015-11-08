@@ -1,5 +1,6 @@
 package persistence
-import models.mv.{ConfiguracionNegocio, ConceptoFinal}
+
+import models.configuracion.{ConfiguracionNegocio, ConceptoFinal}
 
 trait ConfiguracionPersistenceTrait {
 

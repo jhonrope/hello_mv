@@ -1,8 +1,7 @@
 package controllers
 
 import javax.inject.Inject
-
-import models.mv.ConceptoFinal
+import models.configuracion.ConceptoFinal
 import persistence.{ConfiguracionPersistenceTrait, ConfiguracionPersistence}
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.libs.Files.TemporaryFile
@@ -40,7 +39,7 @@ trait NegociosControllerTrait {
     val (complejos, noComplejos) = atrNegocio.atributos.partition(_.concepto.tipo == "complejo")
     val listaOrdenada: List[ConceptoFinal] = complejos ++ noComplejos.sortBy(_.concepto.posicion)
 
-    Ok(agregarAlIndex(views.html.mv.negocio(atrNegocio, "test")))
+    Ok(agregarAlIndex(negocioDefault(atrNegocio, "test", 1)))
   }
 
   def index() = Action {
@@ -109,6 +108,7 @@ trait NegociosControllerTrait {
       case Success(configNegocio) => render {
         case Accepts.Json() => Ok(Json.prettyPrint(Json.toJson(configNegocio.configuracionTemplate)))
         case Accepts.Html() => Ok(agregarAlIndex(views.html.mv.configuracionNegocios(nombreNegocio, true)))
+        case Accepts.Html() => Ok(agregarAlIndex(views.html.mv.configuracionNegocios(nombreNegocio, true)))
       }
       case Failure(failure) => Ok(agregarAlIndex(views.html.mv.configuracionNegocios(nombreNegocio)))
     }
@@ -134,7 +134,7 @@ trait NegociosControllerTrait {
       .getOrElse(Failure(new Exception("NOT_FOUND")))
 
     cargarNegocio match {
-      case Success(negocio) => Ok(agregarAlIndex(views.html.mv.negocio(negocio.configuracionTemplate, nombreNegocio, negocio.id)))
+      case Success(negocio) => Ok(agregarAlIndex(negocioDefault(negocio.configuracionTemplate, nombreNegocio, negocio.id)))
       case Failure(failure) => NotFound(views.html.mv.notFound(failure.getMessage))
     }
   }

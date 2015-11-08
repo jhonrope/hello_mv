@@ -1,4 +1,4 @@
-package models.mv
+package models.configuracion
 
 import play.api.libs.json.Json
 

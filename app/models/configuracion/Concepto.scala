@@ -1,4 +1,4 @@
-package models.mv
+package models.configuracion
 
 import play.api.libs.functional.syntax._
 import play.api.libs.json._

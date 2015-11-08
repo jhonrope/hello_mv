@@ -22,6 +22,8 @@ routesGenerator := InjectedRoutesGenerator
 fork in run := false
 
 TwirlKeys.templateImports += "models.mv._"
+TwirlKeys.templateImports += "models.configuracion._"
+TwirlKeys.templateImports += "models.mv.base._"
 
 javaOptions in Test += "-Dwebdriver.chrome.driver=C:\\Users\\Jhony\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe"
 javaOptions in Test += "-Dwebdriver.ie.driver=C:\\Program Files\\Internet Explorer\\IEDriverServer.exe"

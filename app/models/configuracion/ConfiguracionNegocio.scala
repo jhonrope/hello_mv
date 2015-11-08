@@ -1,3 +1,3 @@
-package models.mv
+package models.configuracion
 
 case class ConfiguracionNegocio(id: Int, nombreNegocio: String, configuracionTemplate: ConceptoFinal)

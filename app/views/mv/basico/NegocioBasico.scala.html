@@ -1,4 +1,4 @@
-@(conceptoFinal : ConceptoFinal, nombreNegocio: String, version: Int = 1)(implicit flash: Flash)
+@(conceptoFinal : ConceptoFinal, nombreNegocio: String, version: Int = 1)(complejoLocal: ComplejoBase)(implicit flash: Flash)
 <script src="/javascripts/dinamicos/@nombreNegocio/mainController.js"></script>
 
 <form action="/dinamico" method="POST" >
@@ -8,5 +8,5 @@
     <a href="/negocios/@nombreNegocio/configuracion" class="btn btn-primary btn-lg" style="float:right">Configurar</a>
     <label style="float:right;">Version: @version</label>
     <label style="color:#43CF15;">@flash.get("success")</label>
-    @complejo(conceptoFinal, "root")
+    @complejoLocal(conceptoFinal, "root")
 </form>

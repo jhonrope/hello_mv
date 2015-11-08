@@ -3,7 +3,7 @@ package persistence
 import javax.inject.{Inject, Singleton}
 
 import controllers.Utils
-import models.mv.{ConceptoFinal, ConfiguracionNegocio}
+import models.configuracion.{ConfiguracionNegocio, ConceptoFinal}
 
 import scala.concurrent.ExecutionContext
 

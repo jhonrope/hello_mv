@@ -4,6 +4,6 @@
 @defining(generarId(idPadre,conceptoFinal.concepto.id)){ case (idModel, idName) =>
 <div class="contCaja col-md-3">
     <label>@{conceptoFinal.concepto.id}</label>
-    <input type="checkbox" name="@idName" ng-model="@idModel" @addAtributosComunes(conceptoFinal) @setInitialValue(conceptoFinal, idModel) @setDisable(conceptoFinal)/>
+    <input type="checkbox" name="@idName" ng-model="@idModel" class="form-control" @addAtributosComunes(conceptoFinal) @setInitialValue(conceptoFinal, idModel) @setDisable(conceptoFinal)/>
 </div>
 }
