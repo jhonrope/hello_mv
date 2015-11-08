@@ -23,5 +23,5 @@ fork in run := false
 
 TwirlKeys.templateImports += "models.mv._"
 
-logLevel in Test := Level.Debug
-javaOptions in Test += "-Dwebdriver.chrome.driver=C:\\Users\\Jhony\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"
+javaOptions in Test += "-Dwebdriver.chrome.driver=C:\\Users\\Jhony\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe"
+javaOptions in Test += "-Dwebdriver.ie.driver=C:\\Program Files\\Internet Explorer\\IEDriverServer.exe"

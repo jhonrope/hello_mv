@@ -1,23 +1,21 @@
 package controllers
 
 import org.scalamock.scalatest.MockFactory
-import org.scalatest.selenium.{Chrome, HtmlUnit}
-import org.scalatest.tags.ChromeBrowser
 import org.scalatest.{BeforeAndAfterEach, FlatSpec, Matchers, OptionValues}
 import org.scalatestplus.play._
 import persistence.ConfiguracionPersistenceTrait
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.libs.ws.WS
 import play.api.mvc.{Action, Controller, Result, Results}
-import play.api.test.{FakeApplication, FakeRequest}
 import play.api.test.Helpers._
+import play.api.test.{FakeApplication, FakeRequest}
 
 import scala.concurrent.{ExecutionContext, Future}
 
 
 class NegociosControllerTest extends FlatSpec with Matchers with OptionValues
 with WsScalaTestClient with BeforeAndAfterEach with Results
-with MockFactory with OneServerPerSuite  with ChromeFactory with HtmlUnit {
+with MockFactory with OneServerPerSuite {
 
   implicit override lazy val app: FakeApplication =
     FakeApplication(
@@ -40,7 +38,7 @@ with MockFactory with OneServerPerSuite  with ChromeFactory with HtmlUnit {
   }
 
 
-  ignore should "devolver status code 200 al consultar index()" in {
+  "NegociosController" should "devolver status code 200 al consultar index()" in {
 
     (configuracionPersistenceMock.listarNegocios _).when().returns(Set("negocio_test"))
 
@@ -54,7 +52,7 @@ with MockFactory with OneServerPerSuite  with ChromeFactory with HtmlUnit {
 
   }
 
-  ignore should "devolver el index con los negocios consultados en el index()" in {
+  it should "devolver el index con los negocios consultados en el index()" in {
 
     (configuracionPersistenceMock.listarNegocios _).when().returns(Set("negocio_test"))
 
@@ -71,25 +69,7 @@ with MockFactory with OneServerPerSuite  with ChromeFactory with HtmlUnit {
   }
 
 
-  ignore should "responder 200 al hacer GET a la ruta /" in {
-    val urlTestApp = s"http://localhost:$port/"
 
-    (configuracionPersistenceMock.listarNegocios _).when().returns(Set("negocio_test"))
-    val controller = new TestController()
 
-    val response = await(WS.url(urlTestApp).get())
 
-    val statusCode: Int = response.status
-
-    statusCode should be(200)
-    response.body should be(Utils.cargarJson("/controllers/index.html").get)
-
-  }
-
-  "NegociosController" should "mostrar los negocios en el listado y cargar la configuracion" in {
-    go to (s"http://localhost:9000/")
-    pageTitle shouldBe "Hello MV - Configurador"
-    click on find(name("configuracion")).value
-
-  }
 }
