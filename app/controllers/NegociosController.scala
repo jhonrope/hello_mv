@@ -12,7 +12,7 @@ import scala.concurrent.ExecutionContext
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
 
-class NegociosController @Inject()(override val configuracionPersistence: ConfiguracionPersistence, override val messagesApi: MessagesApi)
+class NegociosController @Inject()(override val configuracionPersistence: ConfiguracionPersistenceTrait, override val messagesApi: MessagesApi)
                                   (implicit override val ec: ExecutionContext) extends Controller with I18nSupport with NegociosControllerTrait {
 }
 

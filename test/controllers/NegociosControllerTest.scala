@@ -2,10 +2,8 @@ package controllers
 
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.{BeforeAndAfterEach, FlatSpec, Matchers, OptionValues}
-import org.scalatestplus.play._
 import persistence.ConfiguracionPersistenceTrait
 import play.api.i18n.{I18nSupport, MessagesApi}
-import play.api.libs.ws.WS
 import play.api.mvc.{Action, Controller, Result, Results}
 import play.api.test.Helpers._
 import play.api.test.{FakeApplication, FakeRequest}
@@ -14,10 +12,10 @@ import scala.concurrent.{ExecutionContext, Future}
 
 
 class NegociosControllerTest extends FlatSpec with Matchers with OptionValues
-with WsScalaTestClient with BeforeAndAfterEach with Results
-with MockFactory with OneServerPerSuite {
+ with BeforeAndAfterEach with Results
+with MockFactory  {
 
-  implicit override lazy val app: FakeApplication =
+  implicit lazy val app: FakeApplication =
     FakeApplication(
       withRoutes = {
         case ("GET", "/") => Action {
@@ -67,9 +65,5 @@ with MockFactory with OneServerPerSuite {
     (configuracionPersistenceMock.listarNegocios _).verify().atLeastOnce()
 
   }
-
-
-
-
 
 }
